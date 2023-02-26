@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <mass value="0.004"/>
+  <origin xyz="-0.006203 0.003427 0.115064"/>
+  <inertia ixx="0.000050022" ixy="0.000000033" iyy="0.000050572" ixz="0.000002821" iyz="-0.000001439" izz="0.000000728"/>
+</robot>
+

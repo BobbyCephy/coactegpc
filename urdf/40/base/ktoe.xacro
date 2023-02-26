@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:property name="base_height" value="0.118"/>
+  <xacro:property name="base_inertial">
+    <origin xyz="0.000523 -0.000011 -0.074435"/>
+    <mass value="0.429"/>
+    <inertia ixx="0.002938376" ixy="0.000000006" iyy="0.002985633" ixz="0.000014774" iyz="-0.000000381" izz="0.000345833"/>
+  </xacro:property>
+</robot>
+

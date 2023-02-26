@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="coactegpc">
+  <xacro:include filename="$(find coactegpc)/urdf/coactegpc.xacro"/>
+  <link name="world"/>
+  <xacro:coactegpc parent="world" parent_link="world" size="$(arg size)" type="$(arg type)" finger="$(arg finger)"/>
+</robot>
+

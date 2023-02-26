@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:property name="width_close" value="0.016"/>
+  <xacro:property name="width_open" value="0.028"/>
+  <xacro:property name="effort" value="70"/>
+  <xacro:property name="time" value="0.2"/>
+  <xacro:property name="finger_height" value="0.05"/>
+  <xacro:property name="tip_height" value="0.04"/>
+  <xacro:property name="finger_hole_length" value="0.0115"/>
+</robot>
+

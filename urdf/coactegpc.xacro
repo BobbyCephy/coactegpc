@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:macro name="coactegpc" params="parent parent_link size type finger name:=gripper">
+    <xacro:include filename="$(find coactegpc)/urdf/${size}/properties.xacro"/>
+    <xacro:include filename="$(find coactegpc)/urdf/${size}/base/${type}.xacro"/>
+    
+    <xacro:property name="stroke" value="${(width_open-width_close)/2}"/>
+    <xacro:property name="gap_base_jaw" value="0.00065"/>
+    
+    <link name="${name}_base_link">
+      <inertial>
+        <xacro:insert_block name="base_inertial"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://coactegpc/urdf/${size}/base/${type}.dae"/>
+        </geometry>
+        <material name="blue">
+          <color rgba="0.0 0.239215686917305 0.41960784792900085 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://coactegpc/urdf/${size}/base/${type}.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <joint name="${parent}_${name}_joint" type="fixed">
+      <origin xyz="0 0 ${base_height}" rpy="0 0 0"/>
+      <parent link="${parent}"/>
+      <child link="${name}_base_link"/>
+    </joint>
+    
+    <link name="tip"/>
+    
+    <joint name="${name}_tip_joint" type="fixed">
+      <origin xyz="0 0 ${tip_height}" rpy="0 0 0"/>
+      <parent link="${name}_base_link"/>
+      <child link="tip"/>
+    </joint>
+    
+    <xacro:macro name="finger" params="side">
+      <link name="${name}_jaw_${side}_link">
+        <xacro:include filename="$(find coactegpc)/urdf/${size}/jaw/${side}.xacro"/>
+        <visual>
+          <geometry>
+            <mesh filename="package://coactegpc/urdf/${size}/jaw/${side}.dae"/>
+          </geometry>
+          <material name="grey">
+            <color rgba="0.8980392217636108 0.8980392217636108 0.8980392217636108 1.0"/>
+          </material>
+        </visual>
+        <collision>
+          <geometry>
+            <mesh filename="package://coactegpc/urdf/${size}/jaw/${side}.stl"/>
+          </geometry>
+        </collision>
+      </link>
+      
+      <joint name="${name}_base_jaw_${side}_joint" type="prismatic">
+        <parent link="${name}_base_link"/>
+        <child link="${name}_jaw_${side}_link"/>
+        <axis xyz="${(-1)**(side=='left')} 0 0"/>
+        <limit lower="0" upper="${stroke}" effort="${effort}" velocity="${stroke/time}"/>
+        
+        <xacro:if value="${side=='right'}">
+	  <mimic joint="${name}_base_jaw_left_joint"/>
+	</xacro:if>
+      </joint>
+    
+      <link name="${name}_finger_${side}_link">
+        <inertial>
+          <xacro:include filename="$(find coactegpc)/urdf/${size}/finger/${finger}.xacro"/>
+        </inertial>
+        <visual>
+          <geometry>
+            <mesh filename="package://coactegpc/urdf/${size}/finger/${finger}.dae"/>
+          </geometry>
+          <material name="grey">
+            <color rgba="0.8980392217636108 0.8980392217636108 0.8980392217636108 1.0"/>
+          </material>
+        </visual>
+        <collision>
+          <geometry>
+            <mesh filename="package://coactegpc/urdf/${size}/finger/${finger}.stl"/>
+          </geometry>
+        </collision>
+      </link>
+      
+      <joint name="${name}_jaw_finger_${side}_joint" type="fixed">
+        <origin xyz="${(-1)**(side=='left')*(finger_hole_length+width_close/2+stroke)} 0 ${finger_height+gap_base_jaw}" rpy="${-pi/2} 0 ${pi*(side=='right')}"/>
+        <parent link="${name}_jaw_${side}_link"/>
+        <child link="${name}_finger_${side}_link"/>
+      </joint>
+    </xacro:macro>
+    
+    <xacro:finger side="left"/>
+    <xacro:finger side="right"/>
+    
+    <transmission name="${name}_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${name}_base_jaw_left_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${name}_actuator">
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+    
+    <gazebo>
+      <plugin filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so" name="${name}_mimic_joint">
+        <joint>${name}_base_jaw_left_joint</joint>
+        <mimicJoint>${name}_base_jaw_right_joint</mimicJoint>
+      </plugin>
+      
+      <gripper name="${name}">
+        <grasp_check>
+          <attach_steps>2</attach_steps>
+          <detach_steps>2</detach_steps>
+          <min_contact_count>2</min_contact_count>
+        </grasp_check>
+        <palm_link>${parent_link}</palm_link>
+        <gripper_link>${name}_jaw_left_link</gripper_link>
+        <gripper_link>${name}_jaw_right_link</gripper_link>
+      </gripper>
+    </gazebo>
+  </xacro:macro>
+</robot>
+

@@ -1,0 +1,27 @@
+Physikalische Eigenschaften für SCHUNK-1401286 AUB Co-act EGP 40 12_24, Fingereinsatz Typ A Co-act EGP-C
+Allgemeine Eigenschaften:
+	Material:	{}
+	Dichte:	1,000 g/cm^3
+	Masse:	0,016 kg (Relativer Fehler = 0,161637%)
+	Bereich:	6462,908 mm^2 (Relativer Fehler = 0,248190%)
+	Volumen:	16382,058 mm^3 (Relativer Fehler = 0,161637%)
+Schwerpunkt:
+	X:	10,317 mm (Relativer Fehler = 0,161637%)
+	Y:	27,330 mm (Relativer Fehler = 0,161637%)
+	Z:	-0,000 mm (Relativer Fehler = 0,161637%)
+Massenträgheitsmomente in Bezug auf COG(Berechnung mit negativem Integral)
+	Ixx        	3,769 kg mm^2 (Relativer Fehler = 0,161637%)
+	Iyx Iyy    	0,307 kg mm^2 (Relativer Fehler = 0,161637%)	1,254 kg mm^2 (Relativer Fehler = 0,161637%)
+	Izx Izy Izz	0,000 kg mm^2 (Relativer Fehler = 0,161637%)	-0,000 kg mm^2 (Relativer Fehler = 0,161637%)	3,220 kg mm^2 (Relativer Fehler = 0,161637%)
+Massenträgheitsmomente in Bezug auf Global(Berechnung mit negativem Integral)
+	Ixx        	16,005 kg mm^2 (Relativer Fehler = 0,161637%)
+	Iyx Iyy    	-4,312 kg mm^2 (Relativer Fehler = 0,161637%)	2,998 kg mm^2 (Relativer Fehler = 0,161637%)
+	Izx Izy Izz	0,000 kg mm^2 (Relativer Fehler = 0,161637%)	0,000 kg mm^2 (Relativer Fehler = 0,161637%)	17,200 kg mm^2 (Relativer Fehler = 0,161637%)
+Hauptträgheitsmomente in Bezug auf COG
+	I1:	3,806 kg mm^2 (Relativer Fehler = 0,161637%)
+	I2:	1,217 kg mm^2 (Relativer Fehler = 0,161637%)
+	I3:	3,220 kg mm^2 (Relativer Fehler = 0,161637%)
+Drehung von Global- zu Hauptträgheitsmoment
+	Rx:	-0,01 grd (Relativer Fehler = 0,161637%)
+	Ry:	0,03 grd (Relativer Fehler = 0,161637%)
+	Rz:	-6,86 grd (Relativer Fehler = 0,161637%)

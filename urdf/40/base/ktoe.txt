@@ -1,0 +1,27 @@
+Physikalische Eigenschaften für ktoe
+Allgemeine Eigenschaften:
+	Material:	{}
+	Dichte:	1,000 g/cm^3
+	Masse:	0,429 kg (Relativer Fehler = 0,435629%)
+	Bereich:	95479,305 mm^2 (Relativer Fehler = 0,085491%)
+	Volumen:	428892,182 mm^3 (Relativer Fehler = 0,435629%)
+Schwerpunkt:
+	X:	0,523 mm (Relativer Fehler = 0,435629%)
+	Y:	-0,011 mm (Relativer Fehler = 0,435629%)
+	Z:	-74,435 mm (Relativer Fehler = 0,435629%)
+Massenträgheitsmomente in Bezug auf COG(Berechnung mit negativem Integral)
+	Ixx        	562,095 kg mm^2 (Relativer Fehler = 0,435629%)
+	Iyx Iyy    	0,004 kg mm^2 (Relativer Fehler = 0,435629%)	609,234 kg mm^2 (Relativer Fehler = 0,435629%)
+	Izx Izy Izz	-1,914 kg mm^2 (Relativer Fehler = 0,435629%)	-0,020 kg mm^2 (Relativer Fehler = 0,435629%)	345,716 kg mm^2 (Relativer Fehler = 0,435629%)
+Massenträgheitsmomente in Bezug auf Global(Berechnung mit negativem Integral)
+	Ixx        	2938,376 kg mm^2 (Relativer Fehler = 0,435629%)
+	Iyx Iyy    	0,006 kg mm^2 (Relativer Fehler = 0,435629%)	2985,633 kg mm^2 (Relativer Fehler = 0,435629%)
+	Izx Izy Izz	14,774 kg mm^2 (Relativer Fehler = 0,435629%)	-0,381 kg mm^2 (Relativer Fehler = 0,435629%)	345,833 kg mm^2 (Relativer Fehler = 0,435629%)
+Hauptträgheitsmomente in Bezug auf COG
+	I1:	562,111 kg mm^2 (Relativer Fehler = 0,435629%)
+	I2:	609,234 kg mm^2 (Relativer Fehler = 0,435629%)
+	I3:	345,699 kg mm^2 (Relativer Fehler = 0,435629%)
+Drehung von Global- zu Hauptträgheitsmoment
+	Rx:	0,00 grd (Relativer Fehler = 0,435629%)
+	Ry:	-0,51 grd (Relativer Fehler = 0,435629%)
+	Rz:	0,00 grd (Relativer Fehler = 0,435629%)

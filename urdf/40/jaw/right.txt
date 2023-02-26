@@ -1,0 +1,27 @@
+Physikalische Eigenschaften für right
+Allgemeine Eigenschaften:
+	Material:	{}
+	Dichte:	1,000 g/cm^3
+	Masse:	0,004 kg (Relativer Fehler = 0,002174%)
+	Bereich:	3113,281 mm^2 (Relativer Fehler = 0,000000%)
+	Volumen:	3672,293 mm^3 (Relativer Fehler = 0,002174%)
+Schwerpunkt:
+	X:	0,788 mm (Relativer Fehler = 0,002174%)
+	Y:	-3,414 mm (Relativer Fehler = 0,002174%)
+	Z:	-3,137 mm (Relativer Fehler = 0,002174%)
+Massenträgheitsmomente in Bezug auf COG(Berechnung mit negativem Integral)
+	Ixx        	0,217 kg mm^2 (Relativer Fehler = 0,002174%)
+	Iyx Iyy    	-0,045 kg mm^2 (Relativer Fehler = 0,002174%)	0,610 kg mm^2 (Relativer Fehler = 0,002174%)
+	Izx Izy Izz	-0,129 kg mm^2 (Relativer Fehler = 0,002174%)	-0,043 kg mm^2 (Relativer Fehler = 0,002174%)	0,483 kg mm^2 (Relativer Fehler = 0,002174%)
+Massenträgheitsmomente in Bezug auf Global(Berechnung mit negativem Integral)
+	Ixx        	0,296 kg mm^2 (Relativer Fehler = 0,002174%)
+	Iyx Iyy    	-0,035 kg mm^2 (Relativer Fehler = 0,002174%)	0,648 kg mm^2 (Relativer Fehler = 0,002174%)
+	Izx Izy Izz	-0,120 kg mm^2 (Relativer Fehler = 0,002174%)	-0,082 kg mm^2 (Relativer Fehler = 0,002174%)	0,528 kg mm^2 (Relativer Fehler = 0,002174%)
+Hauptträgheitsmomente in Bezug auf COG
+	I1:	0,157 kg mm^2 (Relativer Fehler = 0,002174%)
+	I2:	0,623 kg mm^2 (Relativer Fehler = 0,002174%)
+	I3:	0,530 kg mm^2 (Relativer Fehler = 0,002174%)
+Drehung von Global- zu Hauptträgheitsmoment
+	Rx:	15,80 grd (Relativer Fehler = 0,002174%)
+	Ry:	23,61 grd (Relativer Fehler = 0,002174%)
+	Rz:	-1,10 grd (Relativer Fehler = 0,002174%)
